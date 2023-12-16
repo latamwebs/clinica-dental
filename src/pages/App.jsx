@@ -10,10 +10,9 @@ function App() {
     <div className='container'>
       <section>
         < Navbar />
-        <h1>Clinica Dental Dra. Carmiol</h1>
         <img src={tooth} alt='' />
       </section>
-    </div>  
+    </div>
   )
 }
 
