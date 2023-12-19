@@ -7,11 +7,11 @@ install:  ##Installs dependencies
 	npm install
 run: ##Run the app
 	npm run dev
-build: ##Build the app
+build: ##Build the app with Vite
 	npm run build
 
 ##@ Docker
-build-gitlab:
+build-gitlab: ##Build image on Gitlab
 	docker build -t registry.gitlab.com/anggieprojects/clinica-dental .
-push-gitlab:
+push-gitlab: ##Push image on Gitlab
 	docker push registry.gitlab.com/anggieprojects/clinica-dental

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/app.css'
 import tooth from '../assets/tooth.svg'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
