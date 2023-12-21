@@ -15,3 +15,9 @@ build-gitlab: ##Build image on Gitlab
 	docker build -t registry.gitlab.com/anggieprojects/clinica-dental .
 push-gitlab: ##Push image on Gitlab
 	docker push registry.gitlab.com/anggieprojects/clinica-dental
+
+##@ Cypress
+cypress-open: ##Open Cypress
+	npx cypress open
+cypress-run: ##Run Cypress
+	npx cypress run
