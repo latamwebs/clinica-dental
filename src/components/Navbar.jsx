@@ -1,8 +1,8 @@
 import tooth from "../assets/tooth.svg"
 
-const Navbar = () => {
+export const Navbar = () => {
     return (
-      <nav className="bg-danube-200 rounded-lg drop-shadow-md m-2">
+      <nav className="bg-danube-100 rounded-lg drop-shadow-md m-2">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
@@ -22,5 +22,3 @@ const Navbar = () => {
     );
   
 }
-
-export default Navbar
