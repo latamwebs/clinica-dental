@@ -1,4 +1,3 @@
-import image from "../assets/consultorio.jpg"
 import dental from "../assets/dental2.avif"
 
 export const Inicio = () => {
