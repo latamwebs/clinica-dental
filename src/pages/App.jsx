@@ -6,11 +6,9 @@ import { Inicio } from '../components/Inicio'
 
 function App() {
   return (
-    <div className="container">
-      <section>
+    <div>
         < Navbar />
         < Inicio />
-      </section>
     </div>
   )
 }

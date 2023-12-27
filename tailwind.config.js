@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily:{
+        cursive: "DancingScript"
+      },
       colors: {
         danube: {
           50: "#f3f7fb",

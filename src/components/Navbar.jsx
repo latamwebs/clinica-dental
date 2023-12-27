@@ -1,12 +1,12 @@
-import tooth from "../assets/tooth.svg"
+import favicon from "../assets/favicon.png"
 
 export const Navbar = () => {
     return (
-      <nav className="bg-danube-100 rounded-lg drop-shadow-md m-2">
+      <nav className="bg-transparent rounded-lg drop-shadow-md m-1">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex-shrink-0">
-            <a href="#" className="hover:text-danube-600 font-medium"><i className="fa-solid fa-tooth fa-2xl text-white"></i> Clinica Dental Dra. Carmiol</a>
+            <div className="flex-shrink-1">
+            <a href="#" className="hover:text-danube-600 text-2xl font-bold inline-flex align-middle place-items-center gap-2 font-cursive"><img src={favicon} className="h-10" /> Clinica Dental Dra. Carmiol</a>
             </div>
             <div className="hidden md:block">
             <div className="flex items-baseline">
