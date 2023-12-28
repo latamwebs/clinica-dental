@@ -12,7 +12,7 @@ export const Inicio = () => {
                     {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.5168465159777!2d-84.06236101954758!3d9.899944314719248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e30730ae52eb%3A0xb8b846e37f889b4a!2sClinica%20Dental%20Dra.%20Carmiol!5e0!3m2!1sen!2scr!4v1703709255672!5m2!1sen!2scr" width="600" height="450" style={{border:"0"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
                     {/* <h1 className="text-white font-medium">Somos su clínica dental de confianza</h1> */}
                     {/* <h1 className="text-white font-medium">Trabajamos con las aseguradoras más importantes del país</h1> */}
-                    <a href="#" className="text-dark-300 hover:bg-danube-700 hover:text-white px-3 py-2 rounded-md text-md font-medium">Ver Servicios</a>
+                    <a href="#" className="text-white bg-danube-600 hover:bg-danube-900 hover:text-white px-3 py-2 rounded-md text-md font-medium gap-2">Contáctanos <i className="fa-brands fa-whatsapp fa-xl"></i></a>
                 </section>
                 <section className="relative h-max lg:h-full lg:w-1/2 flex items-center justify-center rounded-lg">
                     {/* <img src={dental} className="rounded-lg"/> */}
