@@ -6,7 +6,7 @@ import { Inicio } from '../components/Inicio'
 
 function App() {
   return (
-    <div>
+    <div className='h-screen'>
         < Navbar />
         < Inicio />
     </div>
