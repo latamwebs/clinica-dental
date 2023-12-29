@@ -1,8 +1,8 @@
-const Servicios = () => {
+export const Servicios = () => {
   return (
-    <div>Servicios</div>
+  <div>
+    Servicios
+  </div>
   )
 }
-
-export default Servicios
 
