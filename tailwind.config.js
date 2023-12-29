@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily:{
-        cursive: "DancingScript"
+      fontFamily: {
+        cursive: "DancingScript",
       },
       colors: {
         danube: {
@@ -24,7 +26,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-animated')
-  ],
-};
+  plugins: [require("tailwindcss-animated")],
+});
