@@ -1,5 +1,6 @@
 import React from "react";
 import clean from "../assets/clean.svg";
+import muelita from "../assets/muelita.svg";
 
 import {
   Card,
@@ -11,9 +12,11 @@ import {
 
 export const Servicios = () => {
   return (
-    <div className="bg-danube-300">
-      <h2>Qué hacemos por tus dientes</h2>
-      <p>
+    <div className="bg-danube-300 bg-lazyload">
+      <h2 className="text-center text-5xl font-bold mt-6 pt-8 pb-4">
+        Qué hacemos <span className="text-danube-800">por tus dientes</span>
+      </h2>
+      <p className="text-center text-2xl font-medium text-blue-gray-900">
         Somos una clinica privada dedicada a ofrecer una atención dental de
         calidad en odontología estética, restauradora y general.
       </p>
@@ -29,25 +32,6 @@ export const Servicios = () => {
             ayudar a determinarlo.
           </Typography>
         </CardBody>
-        <CardFooter className="pt-0">
-          <a href="#" className="inline-block">
-            <Button
-              size="sm"
-              variant="text"
-              className="flex items-center gap-2">
-              Learn More
-              <svg
-                xmlns="http://www.w3.org/1999/xlink"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="h-4 w-4">
-                {/* SVG path */}
-              </svg>
-            </Button>
-          </a>
-        </CardFooter>
       </Card>
     </div>
   );

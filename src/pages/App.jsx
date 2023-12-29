@@ -13,7 +13,6 @@ function App() {
       <Navbar />
       <Inicio />
       <Servicios />
-      <Servicios />
       <Aseguradoras />
       <Contacto />
       <Footer />

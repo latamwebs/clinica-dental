@@ -3,15 +3,26 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: DancingScript;
-    src: url(../assets/DancingScript.ttf) format('truetype');
+  font-family: DancingScript;
+  src: url(../assets/DancingScript.ttf) format("truetype");
 }
-body{
-    background: #f3f7fb;
-    scroll-behavior: smooth;
+body {
+  background: #f3f7fb;
+  scroll-behavior: smooth;
 }
-@media (prefers-reduced-motion:reduce){
-    html{
-        scroll-behavior:auto;
-    }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.bg-lazyload {
+  backdrop-filter: blur(40px);
+  background-image: url(../assets/bgtoth.png), url(../assets/bgtoth.png);
+  background-position: 100% 100%, 0 0;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
+  border-radius: 20px;
+  padding: 6.5rem 1.5rem;
+  position: relative;
 }
