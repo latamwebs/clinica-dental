@@ -6,3 +6,12 @@
     font-family: DancingScript;
     src: url(../assets/DancingScript.ttf) format('truetype');
 }
+body{
+    background: #f3f7fb;
+    scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion:reduce){
+    html{
+        scroll-behavior:auto;
+    }
+}

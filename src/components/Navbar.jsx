@@ -2,7 +2,7 @@ import favicon from "../assets/favicon.png"
 
 export const Navbar = () => {
     return (
-      <nav className="bg-transparent rounded-lg drop-shadow-md m-1">
+      <nav className="bg-white rounded-xl drop-shadow-md m-1 animate-fade-down">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-1">
