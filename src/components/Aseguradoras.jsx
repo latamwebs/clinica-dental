@@ -1,6 +1,6 @@
 export const Aseguradoras = () => {
   return (
-    <div className="bg-white py-20 sm:py-32">
+    <div className="bg-white py-20 sm:py-32" id="seguros">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-3xl font tracking font-semibold leading-8 text-gray-900">
           Contamos con los mejores seguros medicos
