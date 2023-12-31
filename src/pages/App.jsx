@@ -12,8 +12,8 @@ function App() {
     <div>
       <Navbar />
       <Inicio />
-      <Servicios />
       <Aseguradoras />
+      <Servicios />
       <Contacto />
       <Footer />
     </div>

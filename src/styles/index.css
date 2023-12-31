@@ -17,12 +17,9 @@ body {
 }
 
 .bg-lazyload {
-  backdrop-filter: blur(40px);
-  background-image: url(../assets/bgtoth.png), url(../assets/bgtoth.png);
-  background-position: 100% 100%, 0 0;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, auto;
-  border-radius: 20px;
-  padding: 6.5rem 1.5rem;
+  background-image: url(../assets/1.png), url(../assets/2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
