@@ -4,7 +4,7 @@ import { Navbar } from "../components/Navbar";
 import { Inicio } from "../components/Inicio";
 import { Servicios } from "../components/Servicios";
 import { Aseguradoras } from "../components/Aseguradoras";
-import { Contacto } from "../components/Contacto";
+import { Location } from "../components/Location";
 import { Footer } from "../components/Footer";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Inicio />
       <Aseguradoras />
       <Servicios />
-      <Contacto />
+      <Location />
       <Footer />
     </div>
   );
