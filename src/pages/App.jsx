@@ -6,6 +6,7 @@ import { Servicios } from "../components/Servicios";
 import { Aseguradoras } from "../components/Aseguradoras";
 import { Location } from "../components/Location";
 import { Footer } from "../components/Footer";
+import { ContactMe } from "../components/ContactMe";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Inicio />
       <Aseguradoras />
       <Servicios />
+      <ContactMe />
       <Location />
       <Footer />
     </div>
