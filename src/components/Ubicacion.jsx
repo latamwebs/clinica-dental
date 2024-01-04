@@ -1,5 +1,4 @@
-import { Contacto } from "../components/Contacto";
-export const Location = () => {
+export const Ubicacion = () => {
   return (
     <div className="bg-danube-900">
       <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -36,7 +35,19 @@ export const Location = () => {
                 href="#"
                 className="text-sm font-semibold leading-6 text-white">
                 <span aria-hidden="true" className="text-xl">
-                  →
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-10 h-10">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
                 </span>
               </a>
             </div>

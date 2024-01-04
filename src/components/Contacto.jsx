@@ -1,60 +1,74 @@
-import "../styles/contact.css";
+"use client";
 
+import { ImWhatsapp } from "react-icons/im";
+import { AiOutlineInstagram } from "react-icons/ai";
 export const Contacto = () => {
-  const intersectionObserver = new IntersectionObserver((entries) => {
-    if (entries[0].intersectionRatio <= 0) return;
-    //Load animations here
-    const contact1 = document.querySelector(".contact1");
-    const contact2 = document.querySelector(".contact2");
-    console.log({ contact2 });
-    if (contact1.classList.contains("animate-fade-up")) return;
-    contact1.classList.add("animate-fade-up");
-    contact2.classList.add("animate-fade-up");
-    contact2.classList.add("animate-delay-[500ms]");
-  });
-  window.onload = function () {
-    const elem = document.querySelector(".contact1");
-    intersectionObserver.observe(elem);
-  };
   return (
-    <div
-      className="h-max rounded-xl m-1 drop-shadow-md p-3 w-dvw"
-      id="contacto">
-      <div className="flex flex-col lg:flex-row justify-center gap-2">
-        <div className="lg:w-1/2 justify-center items-center flex-col contact1">
-          <div>
-            <h2 className="text-2xl font-semibold justify-start">Ubicación</h2>
-          </div>
-          <div className="max-h-80 w-full rounded-xl overflow-hidden drop-shadow-md">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.5168465159777!2d-84.06236101954758!3d9.899944314719248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e30730ae52eb%3A0xb8b846e37f889b4a!2sClinica%20Dental%20Dra.%20Carmiol!5e0!3m2!1sen!2scr!4v1703709255672!5m2!1sen!2scr"
-              className="border-0 h-64"
-              style={{ width: "100%" }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-        <div className="lg:w-1/2 flex-col items-center gap-2 contact2">
-          <h2 className="text-2xl font-semibold">Horario</h2>
-          <div className="basis-1/2 mb-2">
-            <div className="banner50up-bg overflow-hidden rounded-xl p-3 drop-shadow-md text-lg">
-              <p className="font-medium">Lunes-Sábado: 9:00am-7:00pm</p>
+    <div className="relative isolate overflow-hidden bg-danube-50 py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+          <div className="max-w-xl lg:max-w-lg">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Suscribete a nuestro boletín
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-900">
+              Recibe consejos expertos para el cuidado dental y entérate primero
+              de nuestras promociones y descuentos especiales
+            </p>
+            <div className="mt-6 flex max-w-md gap-x-4">
+              <label htmlFor="email-address" className="sr-only">
+                Email address
+              </label>
+              <input
+                id="email-address"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                className="min-w-0 flex-auto rounded-md border-0 bg-black/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                placeholder="Enter your email"
+              />
+              <button
+                type="submit"
+                className="flex-none rounded-md bg-danube-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                Subscribe
+              </button>
             </div>
           </div>
-          <div className="basis-1/2">
-            <h2 className="text-2xl font-semibold">Contacto</h2>
-            <div className="banner50up-bg overflow-hidden rounded-xl p-3 drop-shadow-md font-medium text-lg">
-              <p>2219-4610</p>
-              <p>8765-1876</p>
-              <a
-                href="mailto:dra.carmiol@gmail.com"
-                className="font-medium text-danube-800 hover:text-danube-800/75">
-                dra.carmiol@gmail.com
-              </a>
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+            <div className="flex flex-col items-start">
+              <ImWhatsapp />
+              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10"></div>
+              <dt className="mt-4 font-semibold text-gray-900">
+                Contactanos por WhatsApp
+              </dt>
+              <dd className="mt-2 leading-7 text-gray-900">
+                Nuestros medicos estan listos para atenderle
+              </dd>
             </div>
-          </div>
+            <div className="flex flex-col items-start">
+              <AiOutlineInstagram />
+              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10"></div>
+              <dt className="mt-4 font-semibold text-gray-900">
+                Dejanos un mensaje en Instagram
+              </dt>
+              <dd className="mt-2 leading-7 text-gray-900">
+                Subimos consejos, actualizaciones y promociones
+              </dd>
+            </div>
+          </dl>
         </div>
+      </div>
+      <div
+        className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
+        aria-hidden="true">
+        <div
+          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        />
       </div>
     </div>
   );
