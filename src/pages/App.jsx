@@ -4,8 +4,10 @@ import { Navbar } from "../components/Navbar";
 import { Inicio } from "../components/Inicio";
 import { Servicios } from "../components/Servicios";
 import { Aseguradoras } from "../components/Aseguradoras";
-import { Contacto } from "../components/Contacto";
+import { Ubicacion } from "../components/Ubicacion";
 import { Footer } from "../components/Footer";
+import { Contacto } from "../components/Contacto";
+import Equipo from "../components/Equipo";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       <Inicio />
       <Aseguradoras />
       <Servicios />
+      <Equipo />
       <Contacto />
+      <Ubicacion />
       <Footer />
     </div>
   );
