@@ -12,7 +12,7 @@ export const Navbar = () => {
               <img src={favicon} className="h-10" /> Clinica Dental Dra. Carmiol
             </a>
           </div>
-          <div className="md:block">
+          <div className="md:block animate-rotate-y animate-delay-[2000ms] animate-ease-in">
             <div className="flex items-center gap-2">
             
             <a href="tel:22714610" className="md:hidden bg-danube-800 p-2 rounded-lg hover:bg-danube-900">
