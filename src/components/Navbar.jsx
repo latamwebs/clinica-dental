@@ -8,27 +8,17 @@ export const Navbar = () => {
           <div className="flex-shrink-1">
             <a
               href="#"
-              className="hover:text-danube-600 text-2xl font-bold inline-flex align-middle place-items-center gap-2 font-cursive">
+              className="hover:text-danube-600 text-xl md:text-2xl font-bold inline-flex align-middle place-items-center gap-2 font-cursive">
               <img src={favicon} className="h-10" /> Clinica Dental Dra. Carmiol
             </a>
           </div>
-          <div className="hidden md:block">
-            <div className="flex items-baseline">
-              <a
-                href="#seguros"
-                className="text-dark-300 hover:bg-danube-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Aseguradoras
-              </a>
-              <a
-                href="#servicios"
-                className="text-dark-300 hover:bg-danube-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Servicios
-              </a>
-              <a
-                href="#contacto"
-                className="text-dark-300 hover:bg-danube-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Contacto
-              </a>
+          <div className="md:block">
+            <div className="flex items-center gap-2">
+            
+            <a href="tel:22714610" className="md:hidden bg-danube-800 p-2 rounded-lg hover:bg-danube-900">
+              <i className="fa-solid text-white fa-phone fa-xl"></i>
+            </a>
+            <a className="hidden md:block p-2 rounded-lg bg-danube-800 hover:bg-danube-900 text-white font-semibold" href="tel:22714610">Contactanos: 22714610</a>
             </div>
           </div>
         </div>
