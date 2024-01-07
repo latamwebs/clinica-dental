@@ -15,10 +15,10 @@ export const Navbar = () => {
           <div className="md:block animate-rotate-y animate-delay-[2000ms] animate-ease-in">
             <div className="flex items-center gap-2">
             
-            <a href="tel:22714610" className="md:hidden bg-danube-600 p-2 rounded-lg hover:bg-danube-900">
-              <i className="fa-solid text-white fa-phone fa-xl"></i>
+            <a href="tel:22714610" className="bg-danube-600 md:bg-transparent p-2 rounded-lg hover:bg-danube-900">
+              <i className="fa-solid text-white md:text-danube-600 fa-phone fa-xl"></i>
             </a>
-            <a className="hidden md:block p-2 rounded-lg bg-danube-600 hover:bg-danube-800 text-white font-semibold" href="tel:22714610">Contactanos: 22714610</a>
+            <a className="hidden md:block p-2 rounded-lg bg-danube-600 hover:bg-danube-800 text-white font-semibold" href="tel:22714610"> 2271-4610</a>
             </div>
           </div>
         </div>
