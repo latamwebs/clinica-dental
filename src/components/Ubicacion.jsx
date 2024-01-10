@@ -28,28 +28,16 @@ export const Ubicacion = () => {
               en Google Maps
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Confirma con nuestro personal el horario de atención
+              Confirma con nuestro personal el horario de atención a los
+              siguientes numeros de contacto:
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-white">
-                <span aria-hidden="true" className="text-xl">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-10 h-10">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
-                    />
-                  </svg>
-                </span>
+              <a href="https://wa.me/50687651876">
+                <i className="fa-brands fa-whatsapp text-5xl  rounded-full py-2 px-3 text-white hover:animate-bounce "></i>
               </a>
+              <p className="text-2xl font-bold text-white">
+                506 8765-1876 <br /> 506 8765-1876
+              </p>
             </div>
           </div>
           <div

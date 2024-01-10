@@ -17,9 +17,7 @@ html {
 }
 
 .bg-lazyload {
-  background-image: url(../assets/1.png), url(../assets/2.png);
-  background-position: center;
+  background-image: url("../assets/bg-teeth-opaque-bw.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }

@@ -1,10 +1,8 @@
 "use client";
 
-import { ImWhatsapp } from "react-icons/im";
-import { AiOutlineInstagram } from "react-icons/ai";
 export const Contacto = () => {
   return (
-    <div className="relative isolate overflow-hidden bg-danube-50 py-16 sm:py-24 lg:py-32">
+    <div className="relative isolate overflow-hidden bg-danube-50 py-8 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
@@ -36,24 +34,39 @@ export const Contacto = () => {
             </div>
           </div>
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-            <div className="flex flex-col items-start">
-              <ImWhatsapp />
+            <div className="flex flex-col">
+              <a
+                href="https://wa.me/50687651876"
+                target="_blank"
+                className="lg:items-center lg:text-center sm:items-start sm:text-start">
+                <i className="fa-brands fa-whatsapp text-5xl text-green-800 hover:text-green-400 animate-bounce"></i>
+              </a>
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10"></div>
-              <dt className="mt-4 font-semibold text-gray-900">
+              <dt className="mt-4 font-semibold text-gray-900 text-xl">
                 Contactanos por WhatsApp
               </dt>
               <dd className="mt-2 leading-7 text-gray-900">
-                Nuestros medicos estan listos para atenderle
+                Nuestros médicos están listos para atenderle, contáctanos y
+                solicitar una consulta!
               </dd>
             </div>
-            <div className="flex flex-col items-start">
-              <AiOutlineInstagram />
+            <div className="flex flex-col">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                className="lg:items-center lg:text-center sm:items-start sm:text-start">
+                <i className="fa-brands fa-instagram text-5xl text-pink-800 hover:text-pink-400 animate-bounce"></i>
+              </a>
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10"></div>
-              <dt className="mt-4 font-semibold text-gray-900">
-                Dejanos un mensaje en Instagram
+              <dt className="mt-4 font-semibold text-gray-900 text-xl">
+                Déjanos un mensaje en Instagram
               </dt>
               <dd className="mt-2 leading-7 text-gray-900">
-                Subimos consejos, actualizaciones y promociones
+                Subimos consejos, actualizaciones y promociones,{" "}
+                <span className="font-bold text-danube-600">
+                  tu salud es nuestra{" "}
+                  <span className="italic text-danube-900">Prioridad!</span>
+                </span>
               </dd>
             </div>
           </dl>
