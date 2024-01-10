@@ -33,7 +33,7 @@ export const Ubicacion = () => {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a href="https://wa.me/50687651876">
-                <i className="fa-brands fa-whatsapp text-5xl  rounded-full py-2 px-3 text-white hover:animate-bounce "></i>
+                <i className="fa-brands fa-whatsapp text-5xl  rounded-full py-2 px-0  text-white hover:animate-bounce "></i>
               </a>
               <p className="text-2xl font-bold text-white">
                 506 8765-1876 <br /> 506 8765-1876
