@@ -1,5 +1,5 @@
-.inicio-bg{
-    background-image: url('../assets/bg-teeth-opaque-bw.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+.inicio-bg {
+  /* background-image: url('../assets/bg-teeth-opaque-bw.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
