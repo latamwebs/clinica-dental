@@ -6,32 +6,37 @@ import dental7 from "../assets/dental7.avif";
 
 export const Inicio = () => {
   return (
-    <div className="bg-transparent h-4/5 drop-shadow-lg flex grow mt-4 inicio-bg p-2">
+    <div className="bg-danube-50/75 drop-shadow-lg flex grow mt-1 md-max:inicio-bg px-2 py-4">
       <div className="flex flex-col lg:flex-row w-full">
-        <section className="my-4 h-48 sm:h-1/2 lg:h-full lg:w-1/2 flex flex-col items-center justify-center gap-2">
-          <h1 className="text-3xl font-bold md:text-4xl animate-fade text-gray-900 text-center">
-            Más de <span className="text-danube-800/80">15 años</span> de
+        <section className="my-4 h-[80svh] lg:h-full lg:w-1/2 flex flex-col items-start justify-center px-4 gap-4">
+          <h1 className="text-4xl font-bold md:text-6xl animate-fade text-gray-900 text-balance animate-fade-up">
+            Más de <span className="text-danube-800/80">20 años</span> de
             experiencia
           </h1>
+          <p className="text-xl leading-8 text-gray-700 animate-fade-up animate-delay-[250ms]">
+            Somos una clinica privada dedicada a ofrecer atención odontológica
+            de calidad en odontología estética, restauradora y general.
+          </p>
+          <div className="flex gap-2 animate-fade-up animate-delay-[400ms]">
+          <a
+            href="#servicios"
+            className="text-white font-semibold bg-danube-600 hover:bg-danube-900 hover:text-white px-3 py-3 rounded-md text-md font-medium">
+            Ver Servicios <i class="fa-solid fa-tooth fa-2xl"></i>
+          </a>
           <a
             href="https://wa.me/50687651876"
-            className="text-white bg-danube-600 hover:bg-danube-900 hover:text-white px-3 py-2 rounded-md text-md font-medium animate-fade animate-delay-[1000ms]">
-            Contáctanos <i className="fa-brands fa-whatsapp fa-xl"></i>
+            className="text-white font-semibold bg-danube-600 hover:bg-danube-900 hover:text-white px-3 py-3 rounded-md text-md font-medium">
+            Whatsapp <i className="fa-brands fa-whatsapp fa-2xl"></i>
           </a>
+          </div>
         </section>
-        <section className="mt-4 lg:mt-0 h-max lg:h-full lg:w-1/2 flex items-center justify-center rounded-lg">
-          <div className="grid grid-cols-2 grid-rows-2 gap-2">
-            <div className="w-24 h-40 sm:h-56 sm:w-36 rounded-xl overflow-hidden flex self-end justify-self-end animate-fade-down">
-              <img src={dental} className="object-cover" />
+        <section className="mt-4 lg:mt-0 h-max lg:h-full lg:w-1/2 hidden lg:flex items-center justify-center">
+          <div className="grid grid-cols-1 grid-rows-2 gap-2">
+            <div className="ms-20 h-40 md:h-72 rounded-xl sm:flex self-end overflow-hidden animate-fade-left">
+              <img src={dental3} className="object-cover rounded-xl" />
             </div>
-            <div className="w-46 h-24 sm:h-36 sm:w-56 rounded-xl sm:flex self-end overflow-hidden animate-fade-left">
-              <img src={dental3} className="object-cover" />
-            </div>
-            <div className="w-46 h-24 sm:h-36 sm:w-56 rounded-xl overflow-hidden animate-fade-right">
-              <img src={dental5} className="object-cover" />
-            </div>
-            <div className="w-24 h-40 sm:h-56 sm:w-36 rounded-xl flex overflow-hidden animate-fade-up">
-              <img src={dental7} className="object-cover" />
+            <div className="me-20 h-40 md:h-72 overflow-hidden animate-fade-right rounded-xl">
+              <img src={dental5} className="object-cover rounded-xl" />
             </div>
           </div>
         </section>
