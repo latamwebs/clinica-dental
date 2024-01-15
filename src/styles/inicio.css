@@ -1,5 +1,16 @@
-.inicio-bg {
-  background-image: url('../assets/dental2.avif');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+@media (max-width:767px) {
+  .inicio-bg {
+    background-image: url('../assets/dental2.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .danube-filter{
+    /* background: linear-gradient(0deg, #e66464b3, #9198e5b3); */
+    /* background: linear-gradient(0deg, #3f87a6, #ebf8e1b3, #f69c3c3d); */
+    background: linear-gradient(0deg, #3f87a6, #ebf8e1bd, #ffffff00);
+    background: linear-gradient(0deg, #486dadfd, #ffffff3c);
+    background: linear-gradient(0deg, #486dad, #ebf8e1bd ,#ffffff3c);
+
+    /* background-blend-mode:difference; */
+  }
+} 
