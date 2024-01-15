@@ -1,9 +1,33 @@
-Website for a dental clinic client. Created with Vite and React.
-Website deploy pending.
+# Clinica Dental Dra.Carmiol
 
-Plugins:
+Clínica dental especializada en servicios odontológicos integrales, desde emergencias hasta procedimientos estéticos avanzados. Ofrecemos atención de alta calidad con tecnología de vanguardia y un equipo profesional altamente capacitado. Tu salud bucal es nuestra prioridad, brindando soluciones efectivas y embelleciendo tu sonrisa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Mejorar readme!!!!
+[![Demo](./src/assets/gift.gif)]()
+
+## Features
+
+- Previsualización en tiempo real
+- Modo pantalla completa
+- Compatibilidad multiplataforma
+- Experiencia móvil optimizada con diseño responsive
+
+![Logo](./src/assets/LogoReadme.png)
+
+## 🛠 Skills
+
+- [x] - JavaScript
+- [x] - HTML
+- [x] - CSS
+- [x] - React.js
+- [x] - Tailwind
+
+## Authors
+
+- [Anggie Alava](https://www.linkedin.com/in/anggiealava/)
+- [Elias Carmiol](https://www.linkedin.com/in/elias-carmiol/)
+
+## Screenshots
+
+![App Screenshot](./src/assets/screenshot.png)
