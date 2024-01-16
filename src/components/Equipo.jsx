@@ -31,10 +31,10 @@ export default function Equipo() {
     <div className="bg-white py-18 sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-5xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl pt-10 text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl pt-10 text-center">
             Conoce a <span className="text-danube-600">nuestro equipo</span>
           </h2>
-          <p className="mt-6 text-2xl leading-8 text-gray-800 text-center">
+          <p className="mt-6 text-2xl leading-8 text-gray-800 text-justify">
             Nuestro equipo de profesionales especializados en la salud bucal
             listos para brindarte la mejor atención
           </p>
