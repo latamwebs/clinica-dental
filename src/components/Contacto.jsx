@@ -39,7 +39,7 @@ export const Contacto = () => {
                 href="https://wa.me/50687651876"
                 target="_blank"
                 className="lg:items-center lg:text-center sm:items-start sm:text-start">
-                <i className="fa-brands fa-whatsapp text-5xl text-green-800 hover:text-green-400 animate-bounce"></i>
+                <i className="fa-brands fa-whatsapp text-5xl text-green-800 hover:text-green-400"></i>
               </a>
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10"></div>
               <dt className="mt-4 font-semibold text-gray-900 text-xl">
@@ -55,7 +55,7 @@ export const Contacto = () => {
                 href="https://www.instagram.com"
                 target="_blank"
                 className="lg:items-center lg:text-center sm:items-start sm:text-start">
-                <i className="fa-brands fa-instagram text-5xl text-pink-800 hover:text-pink-400 animate-bounce"></i>
+                <i className="fa-brands fa-instagram text-5xl text-pink-800 hover:text-pink-400"></i>
               </a>
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10"></div>
               <dt className="mt-4 font-semibold text-gray-900 text-xl">
