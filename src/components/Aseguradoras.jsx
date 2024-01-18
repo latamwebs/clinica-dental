@@ -8,27 +8,27 @@ export const Aseguradoras = () => {
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <img
             className="col-span-2 max-h-64 w-full object-contain lg:col-span-1 ml-8"
-            src="/src/assets/3.png"
+            src="/src/assets/pan.png"
             alt="Transistor"
           />
           <img
             className="col-span-2 max-h-64 w-full object-contain lg:col-span-1"
-            src="/src/assets/2.png"
+            src="/src/assets/asprose.png"
             alt="Reform"
           />
           <img
             className="col-span-2 max-h-64 w-full object-contain lg:col-span-1"
-            src="/src/assets/4.png"
+            src="/src/assets/mafre.png"
             alt="Tuple"
           />
           <img
             className="col-span-2 max-h-64 w-full object-contain sm:col-start-2 lg:col-span-1"
-            src="/src/assets/5.png"
+            src="/src/assets/bluec.png"
             alt="SavvyCal"
           />
           <img
             className="col-span-2 col-start-2 max-h-64 w-full object-contain sm:col-start-auto lg:col-span-1 mx-3"
-            src="/src/assets/1.png"
+            src="/src/assets/bmi.png"
             alt="Statamic"
           />
         </div>
