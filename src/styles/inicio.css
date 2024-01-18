@@ -1,4 +1,4 @@
-@media (max-width:767px) {
+@media (max-width:959px) {
   .inicio-bg {
     background-image: url('../assets/dental2.avif');
     background-size: cover;
@@ -10,7 +10,5 @@
     /* background: linear-gradient(0deg, #3f87a6, #ebf8e1bd, #ffffff00); */
     /* background: linear-gradient(0deg, #486dadfd, #ffffff3c); */
     background: linear-gradient(0deg, #486dad, #ebf8e1a7 ,#ffffff3c);
-
-    /* background-blend-mode:difference; */
   }
 } 
