@@ -3,6 +3,23 @@ import dental3 from "../assets/dental3.avif";
 import dental5 from "../assets/dental5.avif";
 
 export const Inicio = () => {
+
+  const observer = new IntersectionObserver((entries, observer)=>{
+    entries.forEach((entry)=>{
+      console.log(entry.target.id)
+      
+      observer.unobserve(entry.target)
+    })
+  })
+  window.onload = function(e){
+    let seguros = document.getElementById("seguros")
+    let equipo = document.getElementById("equipo")
+    let contacto = document.getElementById("contacto")
+    let ubicacion = document.getElementById("ubicacion")
+    let servicios = document.getElementById("servicios")
+    const components = [seguros, equipo, contacto, ubicacion, servicios]
+    components.forEach((component)=>observer.observe(component))
+  }
   return (
     <div className="inicio-bg">
       <div className="danube-filter animate-fade-up lg:animate-none">
@@ -21,7 +38,7 @@ export const Inicio = () => {
             <a
               href="#servicios"
               className="text-white font-semibold bg-danube-600 hover:bg-danube-900 hover:text-white px-3 py-3 rounded-md text-md font-medium">
-              Ver Servicios <i class="fa-solid fa-tooth fa-2xl"></i>
+              Ver Servicios <i className="fa-solid fa-tooth fa-2xl"></i>
             </a>
             <a
               href="https://wa.me/50687651876"
