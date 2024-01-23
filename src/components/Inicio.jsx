@@ -5,20 +5,33 @@ import dental5 from "../assets/dental5.avif";
 export const Inicio = () => {
 
   const observer = new IntersectionObserver((entries, observer)=>{
-    entries.forEach((entry)=>{
-      console.log(entry.target.id)
-      
+    entries.filter(e=> e.isIntersecting).forEach((entry)=>{
+      if(!entry.target.classList.contains('animate-fade-up')){
+        entry.target.classList.add("animate-fade-up")
+      }
       observer.unobserve(entry.target)
     })
   })
-  window.onload = function(e){
-    let seguros = document.getElementById("seguros")
-    let equipo = document.getElementById("equipo")
-    let contacto = document.getElementById("contacto")
-    let ubicacion = document.getElementById("ubicacion")
-    let servicios = document.getElementById("servicios")
-    const components = [seguros, equipo, contacto, ubicacion, servicios]
-    components.forEach((component)=>observer.observe(component))
+  function animateChildren(component){
+    let comp = document.getElementById(component)
+      let children = comp.children
+      if(children[0].classList.contains("animate-fade-up")) return;
+        Array.from(children).forEach((child,index)=>{
+          let delay = (200*index).toString();
+          console.log(delay)
+          child.classList.add(`animate-delay-[${delay}ms]`)
+          child.classList.add(`animate-fade-up`)
+        })
+  }
+  window.onload = function(){
+    // let seguros = document.getElementById("seguros")
+    // let equipo = document.getElementById("equipo")
+    // let contacto = document.getElementById("contacto")
+    // let ubicacion = document.getElementById("ubicacion")
+    // let servicios = document.getElementById("servicios")
+    // const components = [seguros, equipo, contacto, ubicacion, servicios]
+    const components = Array.from(document.getElementsByClassName("anim"))
+    components.forEach(component=> observer.observe(component))
   }
   return (
     <div className="inicio-bg">

@@ -34,14 +34,14 @@ export default function Equipo() {
           <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl pt-10 text-center">
             Este es <span className="text-danube-600">nuestro equipo</span>
           </h2>
-          <p className="mt-6 text-2xl text-gray-800 text-center">
+          <p className="mt-6 text-2xl text-gray-800 text-center anim">
             Nuestro equipo de profesionales especializados en la salud bucal
             listos para brindarte la mejor atención
           </p>
           <img
             src={Doctora}
             alt=""
-            className="py-4 mt-12 max-w-sm hidden xl:block"
+            className="py-4 mt-12 max-w-sm hidden xl:block anim"
           />
         </div>
         <ul
@@ -49,7 +49,7 @@ export default function Equipo() {
           className="grid gap-x-2 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
           {people.map((person) => (
             <li key={person.name}>
-              <div className="flex flex-col items-center gap-y-2">
+              <div className="flex flex-col items-center gap-y-2 anim">
                 <img
                   className="rounded-xl object-cover h-80 w-64"
                   src={person.imageUrl}
