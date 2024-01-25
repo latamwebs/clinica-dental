@@ -4,6 +4,7 @@ import dental5 from "../assets/dental5.avif";
 
 export const Inicio = () => {
 
+  const whatsNumber = "50687651876";
   const observer = new IntersectionObserver((entries, observer)=>{
     entries.filter(e=> e.isIntersecting).forEach((entry)=>{
       if(!entry.target.classList.contains('animate-fade-up')){
@@ -12,30 +13,13 @@ export const Inicio = () => {
       observer.unobserve(entry.target)
     })
   })
-  function animateChildren(component){
-    let comp = document.getElementById(component)
-      let children = comp.children
-      if(children[0].classList.contains("animate-fade-up")) return;
-        Array.from(children).forEach((child,index)=>{
-          let delay = (200*index).toString();
-          console.log(delay)
-          child.classList.add(`animate-delay-[${delay}ms]`)
-          child.classList.add(`animate-fade-up`)
-        })
-  }
   window.onload = function(){
-    // let seguros = document.getElementById("seguros")
-    // let equipo = document.getElementById("equipo")
-    // let contacto = document.getElementById("contacto")
-    // let ubicacion = document.getElementById("ubicacion")
-    // let servicios = document.getElementById("servicios")
-    // const components = [seguros, equipo, contacto, ubicacion, servicios]
     const components = Array.from(document.getElementsByClassName("anim"))
     components.forEach(component=> observer.observe(component))
   }
   return (
     <div className="inicio-bg">
-      <div className="danube-filter animate-fade-up lg:animate-none">
+      <div className="danube-filter animate-fade lg:animate-none">
         <div className="drop-shadow-lg flex grow mt-1 px-2 py-4 h-[80svh]">
         <div className="flex flex-col lg:flex-row w-full">
           <section className="my-4 h-[80svh] lg:w-1/2 flex flex-col items-start justify-center px-4 gap-4">
@@ -54,7 +38,7 @@ export const Inicio = () => {
               Ver Servicios <i className="fa-solid fa-tooth fa-2xl"></i>
             </a>
             <a
-              href="https://wa.me/50687651876"
+              href={`https://wa.me/${whatsNumber}`}
               className="text-white font-semibold bg-danube-600 hover:bg-danube-900 hover:text-white px-3 py-3 rounded-md text-md font-medium">
               Whatsapp <i className="fa-brands fa-whatsapp fa-2xl"></i>
             </a>
