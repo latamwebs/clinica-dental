@@ -21,7 +21,7 @@ export const Ubicacion = () => {
               </radialGradient>
             </defs>
           </svg>
-          <div className="mx-auto max-w-md text-center lg:mx-0 lg:py-12 lg:text-left md:py-8 sm:py-5">
+          <div className="mx-auto max-w-md text-center lg:mx-0 lg:py-12 lg:text-left md:py-8 sm:py-5 anim">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Puedes encontrar nuestra ubicación
               <br />
@@ -29,18 +29,18 @@ export const Ubicacion = () => {
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Confirma con nuestro personal el horario de atención a los
-              siguientes numeros de contacto:
+              siguiente numero de contacto:
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a href="https://wa.me/50687651876">
                 <i className="fa-brands fa-whatsapp text-5xl  rounded-full py-2 px-0  text-white hover:animate-bounce "></i>
               </a>
               <p className="text-2xl font-bold text-white">
-                506 8765-1876 <br /> 506 8765-1876
+                8765-1876
               </p>
             </div>
           </div>
-          <div className="relative mt-10 mb-10 lg:mt-10 w-full h-80">
+          <div className="relative mt-10 mb-10 lg:mt-10 w-full h-80 anim">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.5168465159777!2d-84.06236101954758!3d9.899944314719248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e30730ae52eb%3A0xb8b846e37f889b4a!2sClinica%20Dental%20Dra.%20Carmiol!5e0!3m2!1sen!2scr!4v1703709255672!5m2!1sen!2scr"
               className="h-full w-full rounded-xl"

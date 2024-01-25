@@ -5,7 +5,7 @@ export const Contacto = () => {
     <div className="relative isolate overflow-hidden bg-danube-50 py-8 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-          <div className="max-w-xl lg:max-w-lg">
+          <div className="max-w-xl lg:max-w-lg anim">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Suscribete a nuestro boletín
             </h2>
@@ -33,7 +33,7 @@ export const Contacto = () => {
               </button>
             </div>
           </div>
-          <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2 anim">
             <div className="flex flex-col">
               <a
                 href="https://wa.me/50687651876"
