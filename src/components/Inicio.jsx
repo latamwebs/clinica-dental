@@ -18,13 +18,13 @@ export const Inicio = () => {
     components.forEach(component=> observer.observe(component))
   }
   return (
-      <div className="animate-fade lg:animate-none min-h-[500px] flex flex-col w-full mx-auto max-w-6xl sm:h-[90svh] xl:h-[80svh] justify-center">
+      <div className="animate-fade lg:animate-none min-h-[500px] flex flex-col w-full mx-auto max-w-6xl h-[85svh] sm:h-[95svh] 2xl:h-[85svh] justify-center">
           <section className="my-4 flex flex-col items-start justify-self-center px-4 gap-6 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold sm:text-6xl animate-fade text-gray-100 animate-fade-up">
               Más de <span className="text-danube-600">20 años</span><br className="sm:max-md:hidden"></br> de
               experiencia
             </h1>
-            <p className="max-w-lg text-xl md:text-2xl leading-8 text-gray-300 text-balance animate-fade-up animate-delay-[250ms] hover:backdrop-blur-lg rounded-lg">
+            <p className="max-w-lg text-xl md:text-2xl leading-8 text-gray-300 text-balance animate-fade-up animate-delay-[250ms]">
               Somos una clinica privada dedicada a ofrecer atención odontológica
               de calidad en odontología estética, restauradora y general.
             </p>
