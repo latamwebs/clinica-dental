@@ -6,7 +6,7 @@ import Estetica from "../assets/estetica.png";
 
 export const Servicios = () => {
   return (
-    <div className="bg-danube-200 py-24 sm:py-32 bg-lazyload">
+    <div className="bg-danube-200 py-24 sm:py-32 bg-lazyload" id="servicios">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -18,7 +18,7 @@ export const Servicios = () => {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16" id="servicios">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             <div className="relative pl-16 bg-danube-400 rounded-tl-xl rounded-br-xl p-8 anim">
               <dt className="text-base font-semibold leading-7 text-gray-900 ml-5">
                 <div className="absolute left-1 top-6 flex h-20 w-20 items-center justify-center rounded-lg">

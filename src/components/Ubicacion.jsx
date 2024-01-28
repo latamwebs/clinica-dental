@@ -27,18 +27,16 @@ export const Ubicacion = () => {
               <br />
               en Google Maps
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Confirma con nuestro personal el horario de atención a los
+            <p className="mt-6 text-lg leading-8 text-gray-300 text-balance">
+              Confirma con nuestro personal el horario de atención al
               siguiente numero de contacto:
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              <a href="https://wa.me/50687651876">
+              <a href="https://wa.me/50687651876" className="mt-10 flex items-center justify-center gap-x-3 lg:justify-start">
                 <i className="fa-brands fa-whatsapp text-5xl  rounded-full py-2 px-0  text-white hover:animate-bounce "></i>
+                <p className="text-2xl font-bold text-white">
+                  8765-1876
+                </p>
               </a>
-              <p className="text-2xl font-bold text-white">
-                8765-1876
-              </p>
-            </div>
           </div>
           <div className="relative mt-10 mb-10 lg:mt-10 w-full h-80 anim">
             <iframe
