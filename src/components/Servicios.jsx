@@ -1,75 +1,239 @@
-import React from "react";
-import Emergency from "../assets/emergencia.png";
-import General from "../assets/general.png";
-import Restauradora from "../assets/restauradora.png";
-import Estetica from "../assets/estetica.png";
+import React, { useEffect } from "react";
+import "../styles/servicios.css"
 
 export const Servicios = () => {
+  
+  useEffect(()=>{
+    const allLinks = document.querySelectorAll(".tabs a");
+    const allTabs = document.querySelectorAll(".tab-content");
+    const tabContentWrapper = document.querySelector(".tab-content-wrapper");
+    const select = document.querySelector(".tabs-select");
+
+    const shiftTabs = (linkId) => {
+      allTabs.forEach((tab, i) => {
+        if (tab.id.includes(linkId)) {
+          allTabs.forEach((tabItem) => {
+            const height = tabContentWrapper.clientHeight;
+            tabItem.style = `transform: translateY(-${i * height}px);`;
+            select.value = linkId;
+          });
+        }
+      });
+    };
+
+    const handleLinkChange = (elem) => {
+      const linkId = elem.id;
+      const hrefLinkClick = elem.href;
+
+      allLinks.forEach((link, i) => {
+        if (link.href == hrefLinkClick) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+
+      shiftTabs(linkId);
+    };
+
+    allLinks.forEach((elem) => {
+      elem.addEventListener("click", function () {
+        handleLinkChange(elem);
+      });
+    });
+
+    //? handle proper selection for initial load
+    const currentHash = window.location.hash;
+
+    let activeLink = document.querySelector(`.tabs a`);
+
+    if (currentHash) {
+      const visibleHash = document.getElementById(
+        `${currentHash.replace("#", "")}`
+      );
+
+      if (visibleHash) {
+        activeLink = visibleHash;
+      }
+    }
+
+    activeLink.classList.toggle("active");
+
+    shiftTabs(activeLink.id);
+
+    const tabsSelect = document.querySelector(".tabs-select");
+
+    tabsSelect.addEventListener("change", function (e) {
+      window.location.hash = e.target.value;
+      const linkId = e.target.value;
+      const elem = document.getElementById(linkId);
+      handleLinkChange(elem);
+    });
+  },[]);
+  
+  
   return (
     <div className="bg-danube-200 py-24 sm:py-32 bg-lazyload" id="servicios">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Qué hacemos por <span className="text-danube-600">tus dientes</span>
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-800 anim">
-            Somos una clinica privada dedicada a ofrecer atención odontológica
-            de calidad en odontología estética, restauradora y general.
-          </p>
+      <div className="tabs-container">
+        <div className="tabs-layout">
+            <select className="tabs-select">
+                <option value="tab1">Your Idea & Vision</option>
+                <option value="tab2">Product Specification</option>
+                <option value="tab3">UX/UI Design</option>
+                <option value="tab4">AI & Machine Learning</option>
+                <option value="tab5">Architecture & Engineering</option>
+                <option value="tab6">MVP Release & Iterations</option>
+            </select>
+            <ul className="tabs">
+                <li>
+                    <a id="tab1" title="Your Idea & Vision" href="#tab1">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-bulb" width="24"
+                            height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
+                            strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"></path>
+                            <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path>
+                            <path d="M9.7 17l4.6 0"></path>
+                        </svg>
+                        Your Idea & Vision
+                    </a>
+                </li>
+                <li>
+                    <a id="tab2" title="Product Specification" href="#tab2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-file-description"
+                            width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"
+                            fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                            <path d="M9 17h6"></path>
+                            <path d="M9 13h6"></path>
+                        </svg>
+                        Product Specification
+                    </a>
+                </li>
+                <li>
+                    <a id="tab3" title="UX/UI Design" href="#tab3">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brush" width="24"
+                            height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
+                            strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M3 21v-4a4 4 0 1 1 4 4h-4"></path>
+                            <path d="M21 3a16 16 0 0 0 -12.8 10.2"></path>
+                            <path d="M21 3a16 16 0 0 1 -10.2 12.8"></path>
+                            <path d="M10.6 9a9 9 0 0 1 4.4 4.4"></path>
+                        </svg>
+                        UX/UI Design Prototype
+                    </a>
+                </li>
+                <li>
+                    <a id="tab4" title="Software Development" href="#tab4">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-robot" width="24"
+                            height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
+                            strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M7 7h10a2 2 0 0 1 2 2v1l1 1v3l-1 1v3a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-3l-1 -1v-3l1 -1v-1a2 2 0 0 1 2 -2z">
+                            </path>
+                            <path d="M10 16h4"></path>
+                            <circle cx="8.5" cy="11.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="15.5" cy="11.5" r=".5" fill="currentColor"></circle>
+                            <path d="M9 7l-1 -4"></path>
+                            <path d="M15 7l1 -4"></path>
+                        </svg>
+                        AI & Machine Learning
+                    </a>
+                </li>
+                <li>
+                    <a id="tab5" title="Architecture & Engineering" href="#tab5">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-settings" width="24"
+                            height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
+                            strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z">
+                            </path>
+                            <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        </svg>
+                        Architecture & Engineering
+                    </a>
+                </li>
+                <li>
+                    <a id="tab6" title="MVP Release & Iterations" href="#tab6">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-rocket" width="24"
+                            height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
+                            strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3">
+                            </path>
+                            <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
+                            <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        </svg>
+                        MVP Release & Iterations
+                    </a>
+                </li>
+            </ul>
+            <div className="tab-content-wrapper">
+                <section id="tab1-content" className="tab-content">
+                    <h2>Your Idea & Vision</h2>
+                    <p>
+                        Maybe you have an idea and a vision of changing the world, your company want to execute new
+                        product
+                        or you just have a unique dataset, but you do not have the knowledge to get the most from your
+                        data.
+                    </p>
+                    <img src="assets/idea.png" alt="idea" />
+                </section>
+                <section id="tab2-content" className="tab-content">
+                    <h2>Product Specification</h2>
+                    <p>
+                        In this phase, we will remove vagueness and draft our minimum viable product in as much detail
+                        as we
+                        can. We will also evaluate the current capabilities of AI and how we can maximise the power of
+                        your
+                        data. This is the key phase and foundation for the future success of your product.
+                    </p>
+                    <img src="assets/product.png" alt="product" />
+                </section>
+                <section id="tab3-content" className="tab-content">
+                    <h2>UX/UI Design</h2>
+                    <p>
+                        We will start to design UX & UI for already approved features. Our design process includes user
+                        research and accessibility as well as usability testing. The end goal of this phase is a smooth
+                        design and an easy-to-use product. We continually iterate over our design features.
+                    </p>
+                    <img src="assets/ui.png" alt="ui" />
+
+                </section>
+                <section id="tab4-content" className="tab-content">
+                    <h2>AI & Machine Learning</h2>
+                    <p>
+                        The application of AI & machine learning is the key focus for every modern product. So many new
+                        market opportunities emerge every day.
+                    </p>
+                    <img src="assets/brain.png" alt="brain" />
+
+                </section>
+                <section id="tab5-content" className="tab-content">
+                    <h2>Architecture & Engineering</h2>
+                    <p>
+                        Software architecture and engineering includes designing the database, backend, and frontend
+                        engineering, as well as preparing the infrastructure and automating your business processes.
+                    </p>
+                    <img src="assets/engineer.png" alt="engineer" />
+                </section>
+                <section id="tab6-content" className="tab-content">
+                    <h2>MVP Release & Iterations</h2>
+                    <p>
+                        Now the product is finalized and ready for users. The product will continue to be extended in an
+                        agile way based on customers’ feedback.
+                    </p>
+                    <img src="assets/release.png" alt="release" />
+                </section>
+            </div>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            <div className="relative pl-16 bg-danube-400 rounded-tl-xl rounded-br-xl p-8 anim">
-              <dt className="text-base font-semibold leading-7 text-gray-900 ml-5">
-                <div className="absolute left-1 top-6 flex h-20 w-20 items-center justify-center rounded-lg">
-                  <img src={Emergency} alt="" />
-                </div>
-                Atención de urgencia
-              </dt>
-              <dd className="mt-2 text-base leading-7 text-gray-700 ml-5">
-                El dolor de muelas puede deberse a varios problemas. Un examen
-                puede ayudar a determinarlo.
-              </dd>
-            </div>
-            <div className="relative pl-16 anim">
-              <dt className="text-base font-semibold leading-7 text-gray-900 ml-5">
-                <div className="absolute left-0 top-0 flex h-20 w-20 items-center justify-center rounded-lg bg-danube-600">
-                  <img src={General} alt="" />
-                </div>
-                Cuidados dentales generales
-              </dt>
-              <dd className="mt-2 text-base leading-7 text-gray-700 ml-5">
-                El dolor de muelas puede deberse a varios problemas. Un examen
-                puede ayudar a determinarlo
-              </dd>
-            </div>
-            <div className="relative pl-16 anim">
-              <dt className="text-base font-semibold leading-7 text-gray-900 ml-5">
-                <div className="absolute left-0 top-0 flex h-20 w-20 items-center justify-center rounded-lg bg-danube-600">
-                  <img src={Estetica} alt="" />
-                </div>
-                Odontología Restauradora
-              </dt>
-              <dd className="mt-2 text-base leading-7 text-gray-700 ml-5">
-                Podemos restaurar su sonrisa, así como la capacidad de hablar y
-                comer con prótesis avanzadas.
-              </dd>
-            </div>
-            <div className="relative pl-16 anim">
-              <dt className="text-base font-semibold leading-7 text-gray-900 ml-5">
-                <div className="absolute left-0 top-0 flex h-20 w-20 items-center justify-center rounded-lg bg-danube-600">
-                  <img src={Restauradora} alt="" />
-                </div>
-                Odontología estética
-              </dt>
-              <dd className="mt-2 text-base leading-7 text-gray-700 ml-5">
-                Una sonrisa bonita contribuye a mejorar el estado de ánimo y
-                aumenta la autoestima. Nosotros podemos ayudarle a conseguirlo.
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </div>
+    </div>
     </div>
   );
 };
