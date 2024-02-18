@@ -77,16 +77,16 @@ export const Servicios = () => {
       <div className="tabs-container">
         <div className="tabs-layout">
             <select className="tabs-select">
-                <option value="tab1">Your Idea & Vision</option>
-                <option value="tab2">Product Specification</option>
-                <option value="tab3">UX/UI Design</option>
-                <option value="tab4">AI & Machine Learning</option>
-                <option value="tab5">Architecture & Engineering</option>
-                <option value="tab6">MVP Release & Iterations</option>
+                <option value="tab1">Odontología General</option>
+                <option value="tab2">Ortodoncia</option>
+                <option value="tab3">Cirugía Maxilofacial</option>
+                <option value="tab4">Implantología</option>
+                <option value="tab5">Prostodoncia</option>
+                <option value="tab6">Endodoncia</option>
             </select>
             <ul className="tabs">
                 <li>
-                    <a id="tab1" title="Your Idea & Vision" href="#tab1">
+                    <a id="tab1" title="Your Idea & Vision" href="#/tab1">
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-bulb" width="24"
                             height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
                             strokeLinecap="round" strokeLinejoin="round">
@@ -95,11 +95,11 @@ export const Servicios = () => {
                             <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path>
                             <path d="M9.7 17l4.6 0"></path>
                         </svg>
-                        Your Idea & Vision
+                        Odontología General
                     </a>
                 </li>
                 <li>
-                    <a id="tab2" title="Product Specification" href="#tab2">
+                    <a id="tab2" title="Product Specification" href="#/tab2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-file-description"
                             width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"
                             fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -109,11 +109,11 @@ export const Servicios = () => {
                             <path d="M9 17h6"></path>
                             <path d="M9 13h6"></path>
                         </svg>
-                        Product Specification
+                        Ortodoncia
                     </a>
                 </li>
                 <li>
-                    <a id="tab3" title="UX/UI Design" href="#tab3">
+                    <a id="tab3" title="UX/UI Design" href="#/tab3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brush" width="24"
                             height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
                             strokeLinecap="round" strokeLinejoin="round">
@@ -123,11 +123,11 @@ export const Servicios = () => {
                             <path d="M21 3a16 16 0 0 1 -10.2 12.8"></path>
                             <path d="M10.6 9a9 9 0 0 1 4.4 4.4"></path>
                         </svg>
-                        UX/UI Design Prototype
+                        Cirugía Maxilofacial
                     </a>
                 </li>
                 <li>
-                    <a id="tab4" title="Software Development" href="#tab4">
+                    <a id="tab4" title="Software Development" href="#/tab4">
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-robot" width="24"
                             height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
                             strokeLinecap="round" strokeLinejoin="round">
@@ -141,11 +141,11 @@ export const Servicios = () => {
                             <path d="M9 7l-1 -4"></path>
                             <path d="M15 7l1 -4"></path>
                         </svg>
-                        AI & Machine Learning
+                        Implantología
                     </a>
                 </li>
                 <li>
-                    <a id="tab5" title="Architecture & Engineering" href="#tab5">
+                    <a id="tab5" title="Architecture & Engineering" href="#/tab5">
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-settings" width="24"
                             height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
                             strokeLinecap="round" strokeLinejoin="round">
@@ -155,11 +155,11 @@ export const Servicios = () => {
                             </path>
                             <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
                         </svg>
-                        Architecture & Engineering
+                        Prostodoncia
                     </a>
                 </li>
                 <li>
-                    <a id="tab6" title="MVP Release & Iterations" href="#tab6">
+                    <a id="tab6" title="MVP Release & Iterations" href="#/tab6">
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-rocket" width="24"
                             height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none"
                             strokeLinecap="round" strokeLinejoin="round">
@@ -170,18 +170,37 @@ export const Servicios = () => {
                             <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
                             <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
                         </svg>
-                        MVP Release & Iterations
+                        Endodoncia
                     </a>
                 </li>
             </ul>
             <div className="tab-content-wrapper">
                 <section id="tab1-content" className="tab-content">
-                    <h2>Your Idea & Vision</h2>
+                    <h2>Servicios</h2>
                     <p>
-                        Maybe you have an idea and a vision of changing the world, your company want to execute new
-                        product
-                        or you just have a unique dataset, but you do not have the knowledge to get the most from your
-                        data.
+                        <ul>
+                            <li>
+                            Resinas (calzas blancas)
+                            </li>
+                            <li>
+                            Blanqueamientos
+                            </li>
+                            <li>
+                            Restauraciones fijas: coronas, puentes, incrustaciones
+                            </li>
+                            <li>
+                            Prótesis dentales: totales y parciales
+                            </li>
+                            <li>
+                            Extracciones
+                            </li>
+                            <li>
+                            Materiales provisionales
+                            </li>
+                            <li>
+                                Otros
+                            </li>
+                        </ul>
                     </p>
                     <img src="assets/idea.png" alt="idea" />
                 </section>
