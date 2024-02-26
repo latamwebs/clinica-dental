@@ -6,7 +6,7 @@ import Mafre from "../assets/mafre.png";
 
 export const Aseguradoras = () => {
   return (
-    <div className="bg-white py-6 sm:py-8">
+    <div className="bg-white py-6 sm:py-8 px-3">
       <div className="mx-auto max-w-10xl">
         <h2 className="text-center text-5xl font tracking font-semibold leading-10 text-gray-600">
           Trabajamos con los mejores seguros médicos
