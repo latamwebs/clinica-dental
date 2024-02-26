@@ -1,20 +1,27 @@
-import { useState } from 'react'
-import '../styles/app.css'
-import tooth from '../assets/tooth.svg'
-import Navbar from '../components/navbar'
+import "../styles/app.css";
+import { Navbar } from "../components/Navbar";
+import { Inicio } from "../components/Inicio";
+import { Servicios } from "../components/Servicios";
+import { Aseguradoras } from "../components/Aseguradoras";
+import { Ubicacion } from "../components/Ubicacion";
+import { Footer } from "../components/Footer";
+import { Contacto } from "../components/Contacto";
+import Equipo from "../components/Equipo";
+import { ParentStart } from "../components/ParentStart";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className='container'>
-      <section>
-        < Navbar />
-        <h1>Clinica Dental Dra. Carmiol</h1>
-        <img src={tooth} alt='' />
-      </section>
-    </div>  
-  )
+    <>
+      <ParentStart nav={<Navbar/>} inicio={<Inicio/>}>
+      </ParentStart>
+      <Aseguradoras />
+      <Servicios />
+      <Equipo />
+      <Contacto />
+      <Ubicacion />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;

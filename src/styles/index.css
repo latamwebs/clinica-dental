@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: DancingScript;
+  src: url(../assets/DancingScript.ttf) format("truetype");
+}
+html {
+  background: #f3f7fb;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.bg-lazyload {
+  background-image: url("../assets/bg-teeth-opaque-bw.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

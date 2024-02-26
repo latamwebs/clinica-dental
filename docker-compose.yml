@@ -1,0 +1,29 @@
+version: "3.3"
+
+services:
+  app:
+    image: registry.gitlab.com/anggieprojects/clinica-dental:latest
+    networks:
+      - net
+      - traefik-public
+    logging:
+      driver: json-file
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik-public"
+        - "traefik.http.routers.clinica-dental-https.entrypoints=https"
+        - "traefik.http.routers.clinica-dental-https.rule=Host(`clinica-dental.angeles.rocks`)"
+        - "traefik.http.routers.clinica-dental-http.rule=Host(`clinica-dental.angeles.rocks`)"
+        - "traefik.constraint-label=traefik-public"
+        - "traefik.http.routers.clinica-dental-https.tls.certresolver=le"
+        - "traefik.http.services.clinica-dental.loadbalancer.server.port=80"
+        - "traefik.http.routers.clinica-dental-http.middlewares=https-redirect"
+        - "traefik.http.routers.clinica-dental-http.entrypoints=http"
+        - "traefik.http.routers.clinica-dental-https.tls=true"
+
+networks:
+  net:
+    driver: overlay
+  traefik-public:
+    external: true
