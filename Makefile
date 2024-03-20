@@ -9,11 +9,13 @@ run: ##Run the app
 	npm run dev
 build: ##Build the app with Vite
 	npm run build
+clean: ##Clean build
+	rm -rf dist
 
 ##@ Docker
-build-gitlab: ##Build image on Gitlab
+image: ##Build image on Gitlab
 	docker build -t registry.gitlab.com/anggieprojects/clinica-dental .
-push-gitlab: ##Push image on Gitlab
+push-image: ##Push image on Gitlab
 	docker push registry.gitlab.com/anggieprojects/clinica-dental
 
 ##@ Cypress
